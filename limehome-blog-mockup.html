@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limehome Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #f9f9f9;
+            color: #4b4b4d;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #4b4b4d;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header nav a {
+            color: #4b4b4d;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .featured-article {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .featured-article img {
+            width: 50%;
+            height: auto;
+        }
+        .featured-article-content {
+            padding: 20px;
+            flex: 1;
+        }
+        .featured-article-content h2 {
+            font-size: 2rem;
+            margin: 0 0 15px;
+        }
+        .featured-article-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .featured-article-content a {
+            color: #0f766e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .featured-article-content a:hover {
+            text-decoration: underline;
+        }
+        .featured-article .meta-info {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .meta-info {
+            display: flex;
+            gap: 10px;
+            margin: 10px 15px 15px;
+        }
+        .meta-pill {
+            background: #f1f1f1;
+            color: #4b4b4d;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .articles-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        article {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            display: flex;
+            flex-direction: column;
+        }
+        article img {
+            width: 100%;
+            height: auto;
+        }
+        article h2 {
+            margin: 15px;
+            font-size: 1.5rem;
+        }
+        article p {
+            margin: 0 15px 15px;
+            color: #666;
+            line-height: 1.5;
+        }
+        article a {
+            margin: 15px;
+            color: #0f766e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        article a:hover {
+            text-decoration: underline;
+        }
+        .text-only-posts {
+            background: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .text-only-posts h2 {
+            margin-bottom: 10px;
+        }
+        .text-only-posts hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 15px 0;
+        }
+        .text-only-posts a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0f766e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .text-only-posts a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #f9f9f9;
+            color: #4b4b4d;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            color: #4b4b4d;
+        }
+        @media screen and (max-width: 768px) {
+            .featured-article {
+                flex-direction: column;
+            }
+            .featured-article img {
+                width: 100%;
+            }
+            .articles-grid {
+                flex-direction: column;
+            }
+            article {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .articles-grid article:nth-child(n+3) {
+                display: none;
+            }
+            .text-only-posts {
+                display: block;
+            }
+        }
+        @media screen and (min-width: 769px) {
+            .text-only-posts {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Limehome Blog</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Stories</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Featured Blog Post -->
+        <div class="featured-article">
+            <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-landscape.png" alt="Featured Image">
+            <div class="featured-article-content">
+                <div class="meta-info">
+                    <div class="meta-pill">December 3, 2024</div>
+                    <div class="meta-pill">5 min read</div>
+                </div>
+                <h2>Welcome to Limehome: The Digital Hotel Revolution</h2>
+                <p>Discover how Limehome is changing the hospitality landscape with fully digital, sustainable, and guest-centric solutions.</p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+        <!-- Blog Grid -->
+        <div class="articles-grid">
+            <!-- Blog Post 1 -->
+            <article>
+                <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-landscape.png" alt="Placeholder Image">
+                <div class="meta-info">
+                    <div class="meta-pill">December 2, 2024</div>
+                    <div class="meta-pill">5 min read</div>
+                </div>
+                <h2>Explore Our New Locations</h2>
+                <p>Discover our latest Limehome destinations and experience comfortable stays in new cities.</p>
+                <a href="#">Read more</a>
+            </article>
+            <!-- Blog Post 2 -->
+            <article>
+                <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-landscape.png" alt="Placeholder Image">
+                <div class="meta-info">
+                    <div class="meta-pill">December 1, 2024</div>
+                    <div class="meta-pill">5 min read</div>
+                </div>
+                <h2>Why Limehome is the Future of Hospitality</h2>
+                <p>Learn how our digital hotel concept is redefining the guest experience.</p>
+                <a href="#">Read more</a>
+            </article>
+            <!-- Blog Post 3 -->
+            <article>
+                <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-landscape.png" alt="Placeholder Image">
+                <div class="meta-info">
+                    <div class="meta-pill">November 30, 2024</div>
+                    <div class="meta-pill">5 min read</div>
+                </div>
+                <h2>Top 5 Cities to Visit in 2024</h2>
+                <p>Check out our curated list of must-visit cities and where you can stay with Limehome.</p>
+                <a href="#">Read more</a>
+            </article>
+            <!-- Blog Post 4 -->
+            <article>
+                <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-landscape.png" alt="Placeholder Image">
+                <div class="meta-info">
+                    <div class="meta-pill">November 29, 2024</div>
+                    <div class="meta-pill">5 min read</div>
+                </div>
+                <h2>Guest Stories: Memorable Stays</h2>
+                <p>Hear from our guests about their unique and delightful experiences at Limehome.</p>
+                <a href="#">Read more</a>
+            </article>
+            <!-- Blog Post 5 -->
+            <article>
+                <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-landscape.png" alt="Placeholder Image">
+                <div class="meta-info">
+                    <div class="meta-pill">November 28, 2024</div>
+                    <div class="meta-pill">5 min read</div>
+                </div>
+                <h2>How We Maintain Sustainability</h2>
+                <p>Discover the steps Limehome takes to ensure a greener and more sustainable future.</p>
+                <a href="#">Read more</a>
+            </article>
+        </div>
+        <!-- Text-Only Posts for Mobile -->
+        <div class="text-only-posts">
+            <h2>Top 5 Cities to Visit in 2024</h2>
+            <p>Check out our curated list of must-visit cities and where you can stay with Limehome.</p>
+            <a href="#">Read more</a>
+            <hr>
+            <h2>Guest Stories: Memorable Stays</h2>
+            <p>Hear from our guests about their unique and delightful experiences at Limehome.</p>
+            <a href="#">Read more</a>
+            <hr>
+            <h2>How We Maintain Sustainability</h2>
+            <p>Discover the steps Limehome takes to ensure a greener and more sustainable future.</p>
+            <a href="#">Read more</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Limehome | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
